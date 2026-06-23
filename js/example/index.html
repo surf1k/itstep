@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Ionicons for clean icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <!-- Intro Screen -->
+    <div id="intro-screen" class="intro-screen">
+        <div class="intro-content">
+            <h1 class="intro-title typing-text" data-i18n="heroWelcome">Welcome!</h1>
+            <div class="button-wrapper">
+                <button id="hold-btn" class="hold-btn">
+                    <span data-i18n="holdToEnter">Hold to Enter</span>
+                    <div class="hold-progress" id="hold-progress"></div>
+                </button>
+            </div>
+        </div>
+        <div class="intro-footer">
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="uk">UK</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="ru">RU</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ambient Background -->
+    <canvas id="ambient-canvas" class="ambient-bg"></canvas>
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button class="theme-toggle-btn">
+            <ion-icon name="color-palette-outline"></ion-icon>
+        </button>
+        <div class="theme-menu hidden">
+            <div class="theme-colors">
+                <button class="color-btn" data-color="#ef4444" style="background: #ef4444;"></button>
+                <button class="color-btn" data-color="#f97316" style="background: #f97316;"></button>
+                <button class="color-btn" data-color="#eab308" style="background: #eab308;"></button>
+                <button class="color-btn" data-color="#4ade80" style="background: #4ade80;"></button>
+                <button class="color-btn" data-color="#3b82f6" style="background: #3b82f6;"></button>
+                <button class="color-btn" data-color="#a855f7" style="background: #a855f7;"></button>
+            </div>
+            <div class="theme-modes">
+                <button class="mode-btn" data-mode="dark">Dark</button>
+                <button class="mode-btn" data-mode="light">Light</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="main-container hidden" id="main-container">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-info">
+                <figure class="avatar-box">
+                    <img src="https://images6.alphacoders.com/132/thumb-1920-1325098.png" alt="Avatar">
+                </figure>
+                <div class="info-content">
+                    <h1 class="name" data-i18n="devName">ym1co</h1>
+                    <p class="title" data-i18n="devTitle">Web Developer</p>
+                </div>
+            </div>
+
+            <div class="sidebar-info-more">
+                <div class="separator"></div>
+                <ul class="contacts-list">
+                    <li class="contact-item">
+                        <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+                        <div class="contact-info">
+                            <p class="contact-title" data-i18n="emailTitle">Email</p>
+                            <a href="mailto:alena63878@gmail.com" class="contact-link">alena63878@gmail.com</a>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="icon-box"><ion-icon name="logo-github"></ion-icon></div>
+                        <div class="contact-info">
+                            <p class="contact-title">GitHub</p>
+                            <a href="https://github.com/Den35090" class="contact-link" target="_blank">github.com/Den35090</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="separator"></div>
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="uk">UK</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="content-area">
+            
+            <!-- Navbar -->
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <button class="nav-link active" data-target="about" data-i18n="navAbout">About</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-target="projects" data-i18n="navProjects">Projects</button>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- About Section -->
+            <article class="article-section active slide-in-left" id="about">
+                <header>
+                    <h2 class="h2 article-title" data-i18n="aboutTitle">About Me</h2>
+                </header>
+                <section class="about-text">
+                    <p data-i18n="aboutText1">Hi! I'm a developer who creates innovative web applications and projects.</p>
+                    <p data-i18n="aboutText2">On this page you can view my work and learn more about my skills.</p>
+                    
+                    <h3 class="skills-title" data-i18n="skillsTitle">My Skills</h3>
+                    <ul class="skills-list">
+                        <li class="skill-item">HTML</li>
+                        <li class="skill-item">CSS / SCSS</li>
+                        <li class="skill-item">JavaScript (ES6+)</li>
+                        <li class="skill-item">Python</li>
+                        <li class="skill-item">C#</li>
+                        <li class="skill-item">C++</li>
+                        <li class="skill-item">Client-Server Apps (C#)</li>
+                        <li class="skill-item">Java</li>
+                        <li class="skill-item">Linux</li>
+                        <li class="skill-item">Server Deployment</li>
+                        <li class="skill-item">Prompt Engineering</li>
+                        <li class="skill-item">Git / GitHub</li>
+                    </ul>
+
+                    <!-- Decorative elements at the bottom -->
+                    <div class="decorative-panel">
+                        <div class="deco-stat">
+                            <span class="deco-label" data-i18n="coffeeConsumed">Coffee Consumed</span>
+                            <div class="deco-bar"><div class="deco-fill" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="deco-stat">
+                            <span class="deco-label" data-i18n="bugsSquashed">Bugs Squashed</span>
+                            <div class="deco-bar"><div class="deco-fill" style="width: 95%;"></div></div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+            <!-- Projects Section -->
+            <article class="article-section" id="projects">
+                <header>
+                    <h2 class="h2 article-title" data-i18n="projectsTitle">My Projects</h2>
+                </header>
+                <section class="projects-section">
+                    <ul class="filter-list">
+                        <li class="filter-item">
+                            <button class="filter-btn active" data-filter="all" data-i18n="filterAll">All</button>
+                        </li>
+                        <li class="filter-item">
+                            <button class="filter-btn" data-filter="web" data-i18n="filterWeb">Web</button>
+                        </li>
+                        <li class="filter-item">
+                            <button class="filter-btn" data-filter="software" data-i18n="filterSoftware">Software</button>
+                        </li>
+                    </ul>
+                    <div id="projectsList" class="projects-grid">
+                        <!-- Projects load here -->
+                    </div>
+                </section>
+            </article>
+
+            <!-- Inline Project Details Section -->
+            <article class="article-section" id="project-details-inline">
+                <header>
+                    <button class="back-btn" id="back-to-projects">
+                        <ion-icon name="arrow-back-outline"></ion-icon> <span data-i18n="backToPortfolio">Back</span>
+                    </button>
+                    <h2 class="h2 article-title" id="inlineDetailsTitle">Project Title</h2>
+                </header>
+                <section class="project-details-section">
+                    <figure class="project-details-image-box">
+                        <img id="inlineDetailsImage" src="" alt="Project Image" class="project-details-image">
+                    </figure>
+                    <div class="project-details-content">
+                        <p class="project-details-description" id="inlineDetailsDescription"></p>
+                        
+                        <div class="project-details-info">
+                            <h3 data-i18n="technologiesUsed">Technologies Used</h3>
+                            <div class="technologies-list" id="inlineTechnologiesList"></div>
+                        </div>
+
+                        <div class="project-details-info">
+                            <h3 data-i18n="projectDetailsTitle">Project Details</h3>
+                            <p id="inlineDetailsText"></p>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+        </div>
+        
+        <!-- System Control Panel (Full Width Bottom) -->
+        <div class="bottom-panel deco-toys" id="interactive-panel">
+            <div class="toy-header">
+                <ion-icon name="hardware-chip-outline"></ion-icon> <span data-i18n="sysControl">System Control</span>
+            </div>
+            <div class="toy-controls">
+                <div class="toy-slider-container">
+                    <div class="toy-value" id="slider-val">70%</div>
+                    <input type="range" min="0" max="100" value="70" id="main-slider" class="styled-slider">
+                </div>
+                <div class="toy-toggles">
+                    <label class="cyber-switch" id="cyber-s1">
+                        <input type="checkbox" id="switch-1" checked>
+                        <span class="cyber-slider"></span>
+                    </label>
+                    <label class="cyber-switch" id="cyber-s2">
+                        <input type="checkbox" id="switch-2">
+                        <span class="cyber-slider"></span>
+                    </label>
+                    <button class="cyber-btn" id="ping-btn" data-i18n="pingBtn">Ping</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Background Music (LoFi) -->
+    <audio id="bg-music" loop src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3"></audio>
+
+    <script src="js/languages.js"></script>
+    <script src="js/ambient.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

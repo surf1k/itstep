@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3: Цитата</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../autorize/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <canvas id="ambient-canvas" class="ambient-bg"></canvas>
+    <div class="theme-switcher">
+        <button class="theme-toggle-btn"><ion-icon name="color-palette-outline"></ion-icon></button>
+        <div class="theme-menu hidden">
+            <div class="theme-colors">
+                <button class="color-btn" data-color="#ef4444" style="background: #ef4444;"></button>
+                <button class="color-btn" data-color="#f97316" style="background: #f97316;"></button>
+                <button class="color-btn" data-color="#eab308" style="background: #eab308;"></button>
+                <button class="color-btn" data-color="#4ade80" style="background: #4ade80;"></button>
+                <button class="color-btn" data-color="#3b82f6" style="background: #3b82f6;"></button>
+                <button class="color-btn" data-color="#a855f7" style="background: #a855f7;"></button>
+            </div>
+            <div class="theme-modes">
+                <button class="mode-btn" data-mode="dark">Dark</button>
+                <button class="mode-btn" data-mode="light">Light</button>
+            </div>
+        </div>
+    </div>
+    <div class="code-blocks">
+        <div class="black-stripe"></div>
+        <div class="code-slot">
+            <h1>Случайная цитата</h1>
+            <button class="btn" onclick="fetchRandomQuote()">Получить цитату</button>
+            <div id="quote-container" class="card">Нажмите кнопку... (Не забудьте вставить API ключ в script.js!)</div>
+        </div>
+        <div class="black-stripe"></div>
+    </div>
+    <script src="script.js"></script>
+    <script src="../autorize/ambient.js"></script>
+    <script src="../autorize/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Ionicons for clean icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <!-- Ambient Background -->
+    <canvas id="ambient-canvas" class="ambient-bg"></canvas>
+
+    <!-- Main Container -->
+    <main class="main-container" id="main-container">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-info">
+                <figure class="avatar-box">
+                    <img src="https://images6.alphacoders.com/132/thumb-1920-1325098.png" alt="Avatar">
+                </figure>
+                <div class="info-content">
+                    <h1 class="name" data-i18n="devName">Alena</h1>
+                    <p class="title" data-i18n="devTitle">Web Developer</p>
+                </div>
+            </div>
+
+            <div class="sidebar-info-more">
+                <div class="separator"></div>
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="uk">UK</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <div class="separator"></div>
+                <a href="index.html" class="back-link">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                    <span data-i18n="backToPortfolio">Back to Portfolio</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="content-area">
+            
+            <!-- Project Details Section -->
+            <article class="article-section active project-details">
+                <header>
+                    <h2 class="h2 article-title" id="detailsTitle">Project Title</h2>
+                </header>
+                <section class="project-details-section">
+                    <figure class="project-details-image-box">
+                        <img id="detailsImage" src="" alt="Project Image" class="project-details-image">
+                    </figure>
+                    <div class="project-details-content">
+                        <p class="project-details-description" id="detailsDescription"></p>
+                        
+                        <div class="project-details-info">
+                            <h3 data-i18n="technologiesUsed">Technologies Used</h3>
+                            <div class="technologies-list" id="technologiesList"></div>
+                        </div>
+
+                        <div class="project-details-info">
+                            <h3 data-i18n="projectDetailsTitle">Project Details</h3>
+                            <p id="detailsText"></p>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+        </div>
+    </main>
+
+    <script src="js/languages.js"></script>
+    <script src="js/ambient.js"></script>
+    <script src="js/project-details.js"></script>
+</body>
+</html>
